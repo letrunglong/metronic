@@ -24,7 +24,6 @@ import {
   MetronicSplashScreenProvider,
   MetronicSubheaderProvider
 } from "./_metronic/layout";
-import {MetronicI18nProvider} from "./_metronic/i18n";
 
 /**
  * Base URL of the website.
@@ -39,7 +38,7 @@ const { PUBLIC_URL } = process.env;
  *
  * @see https://github.com/ctimmerm/axios-mock-adapter
  */
-/* const mock = */ _redux.mockAxios(axios);
+/* const mock = */
 
 /**
  * Inject metronic interceptors for axios.
@@ -49,7 +48,6 @@ const { PUBLIC_URL } = process.env;
 _redux.setupAxios(axios, store);
 
 ReactDOM.render(
-  <MetronicI18nProvider>
     <MetronicLayoutProvider>
       <MetronicSubheaderProvider>
         <MetronicSplashScreenProvider>
@@ -57,6 +55,6 @@ ReactDOM.render(
         </MetronicSplashScreenProvider>
       </MetronicSubheaderProvider>
     </MetronicLayoutProvider>
-  </MetronicI18nProvider>,
+,
   document.getElementById("root")
 );
